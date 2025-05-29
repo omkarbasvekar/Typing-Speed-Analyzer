@@ -1,4 +1,4 @@
-# Typing Speed Analyzer
+# Typing Speed Analyzer-1
 
 A cloud-based web application to test and track typing speed and accuracy in real time.
 
