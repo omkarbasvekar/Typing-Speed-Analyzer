@@ -23,8 +23,7 @@ pipeline {
                 '
 
                 scp -i \$KEY -o StrictHostKeyChecking=no -r \
-                    src public \
-                    Dockerfile package.json package-lock.json vite.config.js index.html\
+                    frontend\
                     ${DOCKER_USER}@${DOCKER_HOST_IP}:${DOCKER_APP_DIR}/
 
                 ssh -i \$KEY -o StrictHostKeyChecking=no ${DOCKER_USER}@${DOCKER_HOST_IP} '
