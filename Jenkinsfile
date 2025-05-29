@@ -27,7 +27,7 @@ pipeline {
                     ${DOCKER_USER}@${DOCKER_HOST_IP}:${DOCKER_APP_DIR}/
 
                 ssh -i \$KEY -o StrictHostKeyChecking=no ${DOCKER_USER}@${DOCKER_HOST_IP} '
-                    cd ${DOCKER_APP_DIR} &&
+                    cd ${DOCKER_APP_DIR}/frontend &&
                     docker build -t vite-chat-app .
                 '
             """
