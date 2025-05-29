@@ -42,7 +42,7 @@ pipeline {
                     sh """
                         ssh -i \$KEY -o StrictHostKeyChecking=no ${DOCKER_USER}@${DOCKER_HOST_IP} '
                             docker rm -f vite-chat-container || true &&
-                            docker run -d -p 3000:3000 --name vite-chat-container vite-chat-app
+                            docker run -d -p 80:80 --name vite-chat-container vite-chat-app
                         '
                     """
                 }
